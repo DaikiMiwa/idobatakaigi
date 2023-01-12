@@ -14,8 +14,8 @@ const app = firebase.initializeApp(firebaseConfig);
 
 // Initialize Realtime Database and get a reference to the service
 const database = firebase.database(app);
-const messageRef = database.ref("message")
+const messagesRef = database.ref("message")
 
 export const pushMessage = ({ name, text}) => {
-    messageRef.push({ name, text})
+    messagesRef.push({ name, text})
 }
